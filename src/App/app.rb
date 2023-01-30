@@ -1,3 +1,5 @@
+require "../controller/manager"
+
 module App
     def self.run
         menu = Menu.new
@@ -20,7 +22,7 @@ module App
 
     class Menu
         def initialize
-
+            @manager = Manager.new
         end
 
         def add
