@@ -1,5 +1,4 @@
 require "securerandom"
-puts SecureRandom.uuid
 
 class Note
     attr_reader :id
@@ -8,5 +7,9 @@ class Note
         @id = SecureRandom.uuid
         @text = text
         @date = Time.now
+    end
+
+    def to_s
+        "Date #{@date.strftime("%Y-%m-%d %H:%M:%S")} \nNote: #@text"
     end
 end
